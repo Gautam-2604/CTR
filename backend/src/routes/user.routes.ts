@@ -51,7 +51,7 @@ router.get("/presignedUrl", async (req, res) => {
         Bucket: 'web-3-saas',
         Key: `${userId}/${Math.random()}/image.jpg`,
         Conditions: [
-          ['content-length-range', 0, 5 * 1024 * 1024] // 5 MB max
+          ['content-length-range', 0, 5 * 1024 * 1024] 
         ],
         Expires: 3600
     })
