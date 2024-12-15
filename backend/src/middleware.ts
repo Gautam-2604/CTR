@@ -12,14 +12,14 @@ export function authMiddleware(req: Request, res: Response, next: NextFunction) 
         if (decoded.userId) {
             // @ts-ignore
             req.userId = decoded.userId;
-            return next();
+             next();
         } else {
-            return res.status(403).json({
+             res.status(403).json({
                 message: "You are not logged in"
             })    
         }
     } catch(e) {
-        return res.status(403).json({
+         res.status(403).json({
             message: "You are not logged in"
         })
     }
