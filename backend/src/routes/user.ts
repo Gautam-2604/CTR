@@ -3,7 +3,7 @@ import { Router } from "express";
 import jwt from 'jsonwebtoken'
 import { S3Client, GetObjectCommand, PutObjectCommand } from '@aws-sdk/client-s3'
 import { createPresignedPost } from '@aws-sdk/s3-presigned-post'
-import { JWT_SECRET } from "../config";
+import { JWT_SECRET, TOTAL_DECIMALS } from "../config";
 import { authMiddleware } from "../middleware";
 import { createTaskInput } from "../types";
 import { Connection, PublicKey, Transaction } from "@solana/web3.js";
@@ -26,7 +26,7 @@ const s3Client = new S3Client({
 const client = new PrismaClient()
 
 router.post('/task', authMiddleware, async (req,res)=>{
-    router.post("/task", authMiddleware, async(req, res) => {
+    
         //@ts-ignore
         const userId = req.userId
         // validate the inputs from the user;
@@ -100,10 +100,7 @@ router.post('/task', authMiddleware, async (req,res)=>{
         })
     
     })
-    
-
-
-})
+ 
 
 router.post('/signin',async (req,res)=>{
     const hardcodedWalletAddress = '8YSsiNNntvpegmBYZNLQ4RttgzMU9osxaowyJZ53gFTi'
