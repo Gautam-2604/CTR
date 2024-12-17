@@ -1,1 +1,1 @@
-{"root":["./src/config.ts","./src/index.ts","./src/middleware.ts","./src/routes/user.ts","./src/routes/worker.routes.ts"],"version":"5.7.2"}
+{"root":["./src/config.ts","./src/db.ts","./src/index.ts","./src/middleware.ts","./src/privatekey.ts","./src/types.ts","./src/routes/user.ts","./src/routes/worker.ts"],"version":"5.7.2"}
