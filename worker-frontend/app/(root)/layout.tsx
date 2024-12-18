@@ -5,7 +5,9 @@ import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import {
     WalletModalProvider
 } from '@solana/wallet-adapter-react-ui';
+
 require('@solana/wallet-adapter-react-ui/styles.css');
+
 
 export default function RootLayout({
   children,
